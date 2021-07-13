@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+                               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+        <title>Who's Waldo?</title>
+		
+		<style>
+			.card {
+				position: relative; width: 100%;height: 100%;
+				display: inline;
+			}
+			.card .img-top {
+				width:100%; height:100%;							
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+			}
+			.card:hover .img-top {
+				opacity: 1;
+			}
+			.card2 {
+				position: relative; width: 100%;height: 100%;
+				display: inline;
+			}
+			.card2 .img-top {
+				width:100%; height:100%;							
+				position: relative;
+				top: 0;
+				left: 0;
+				opacity: 0.5;
+			}
+			.card2:hover .img-top {
+				opacity: 1;
+			}
+		</style>
+    </head>
+    <body class="container" style="max-width:840px">
+
+        <!-- Title -->
+        <div>
+            <div class='row mt-5 mb-3'>
+                <div class='col text-center'>
+                    <p class="h2 font-weight-normal">Who's Waldo?</p>
+					<p class="h2 font-weight-normal">Linking People Across Text and Images</p>
+                </div>
+            </div>
+
+            <!-- authors -->
+            <div class="row text-center h6 font-weight-bold pl-5 pr-4 mb-4 mr-5 ml-5">
+                <a class="col-md-4 col-xs-6 pb-2" href="https://www.linkedin.com/in/claire-yuqing-cui/"><span>Claire Yuqing Cui *</span></a>
+				<a class="col-md-4 col-xs-6 pb-2" href="https://apoorvkh.com"><span>Apoorv Khandelwal *</span></a>
+                <a class="col-md-4 col-xs-6 pb-2" href="https://yoavartzi.com/"><span>Yoav Artzi</span></a>
+                <a class="col-md-2 col-xs-6"><span></span></a>
+                <a class="col-md-4 col-xs-6" href="http://www.cs.cornell.edu/~snavely/"><span>Noah Snavely</span></a>
+                <a class="col-md-4 col-xs-6" href="http://www.cs.cornell.edu/~hadarelor/"><span>Hadar Averbuch-Elor</span></a>
+                <a class="col-md-2 col-xs-6"><span></span></a>
+            </div>
+
+            <!-- affiliations -->
+            <div class='row mt-1 mt-2' >
+                <div class='col text-center'>
+                    <p class="h6">
+                    <a href="https://www.cornell.edu/"><span>Cornell University</span></a>
+                    </p>
+                    <p class="h6">ICCV 2021</p>
+                    </br>
+                </div>
+            </div>	
+        </div>
+		
+		<!-- teaser -->
+		<div class='row justify-content-center' >
+			<div class="card">
+				<img src="assets/cues/images.PNG" alt="image" class="img-fluid rounded mx-auto d-block" >
+				<div class="img-top">
+				<img src="assets/cues/cues.PNG" alt="image" class="img-fluid rounded mx-auto d-block" >
+				</div>
+			</div>
+			<div class='col-md-12 col-sm-12 col-xs-12 align-middle mt-1'>
+			<p class='h6'>
+				<em>How can we estimate relative rotation between images in extreme non-overlapping cases? 
+        (Hover over the images to reveal some implicit cues!)</em>
+			</p>
+			</div>
+			<div class='col-md-12 col-sm-12 col-xs-12 align-middle mt-1'>
+			<p class="text-break">
+			Above we show two non-overlapping
+			image pairs capturing an urban street scene (left) and a
+			church (right). Possible cues revealing their relative geometric relationship include sunlight
+			and direction of shadows in outdoor scenes and
+      parallel lines and vanishing points in manmade scenes.
+			</p>
+			</div>
+      <div class='col-md-12 col-sm-12 col-xs-12 align-middle mt-1'>
+			<p class='h6 font-weight-bold '>
+      In this work, we present an approach for reasoning about such "hidden" cues for 
+      estimating the relative rotation between a pair of (possibly) non-overlapping images.      
+      </p>
+			</div>
+		</div>
+		
+
+        <!-- Paper section -->
+        <div>
+            <hr>
+            <div class='row'>
+                <div class='col-md-3 col-sm-3 col-xs-12 text-center col-sm-3'>
+                    <div class="row mt-4">
+                        <a href="https://arxiv.org/pdf/" style="max-width:200px; margin-left:auto; margin-right:auto"><!-- pdf link -->
+                            <img src="assets/paper.PNG" alt="paper-snapshot" class="img-thumbnail" width="80%" style="box-shadow: 10px 10px 5px grey;">
+                        </a>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <a class="h5" href="https://arxiv.org/abs/" style="margin-right:10px">
+                                <span>[Arxiv]</span>
+                            </a>
+                            <a class="h5" href="" style="margin-right:10px">
+                                <span>[Code] (coming soon)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-9 col-sm-9 col-xs-12'>
+                    <p class='h4 font-weight-bold '>Abstract</p>
+                    <p style='line-height:1;'>
+                    We present a task and benchmark dataset for <b>person-centric
+                    visual grounding</b>, the problem of linking between people
+                    named in a caption and people pictured in an image. In contrast
+                    to prior work in visual grounding, which is predominantly
+                    object-based, our new task masks out the names of the people in
+                    the caption in order to encourage methods trained on such
+                    image–caption pairs to focus on contextual cues such as rich
+                    interactions between multiple people, rather than learning associations
+                    between names and appearance. To facilitate this task, we introduce
+                    a new dataset, <b>Who's Waldo</b>, mined automatically from image–caption
+                    data on Wikimedia Commons. We propose a Transformer-based method that
+                    outperforms several strong baselines on this task, and will release
+                    our data to the research community to spur work on contextual models that
+                    consider both language and vision.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr>
+            <div class='row text-center'>
+                <div class='col'>
+                    <p class='h3'>Overview of our Method</p>
+                </div>
+            </div>
+			
+			<div class='row mt-3'>                
+                <div class='col-md-12 col-sm-12 col-xs-12 mt-3'>
+                    <img src="assets/overview.png" class="img-fluid" alt="overview">
+                </div>  
+			</div> 
+			<div class='row mt-3'>        				
+                <div class='col-md-12 col-sm-12 col-xs-12 mt-3'>
+                    <p class="text-break">
+                    Given a pair of images, a shared-weight Siamese encoder extracts feature maps. We compute a 4D correlation
+					volume using the inner product of features, from which our model predicts the relative rotation (here, as distributions over Euler angles).
+                    </p>
+                </div>
+            </div>
+
+            <div class='row mt-3'>
+                <div class='col-md-6 col-sm-6 col-xs-12 mt-3'>
+                    <img src="assets/4dcrv.jpg" class="img-fluid" alt="4dcrv">
+                </div>
+                <div class='col-md-6 col-sm-6 col-xs-12 align-middle mt-3'>
+                    <p class="text-break">
+                    A 4D correlation volume is
+					calculated from a pair of image feature maps. Given a feature vector
+					from Image 1, we compute the dot product with all feature vectors
+					in Image 2, and build up a 2D slice of size H x W. Combining
+					all 2D slices over all feature vectors in Image 1, we obtain a 4D
+					correlation volume of size H x W x H x W.  
+					<br>
+					Our correlation volumes
+					are implicitly assigned a dual role which emerges
+					through training on both overlapping and non-overlapping
+					pairs. When the input image pair contains significant overlap,
+					pointwise correspondence can be computed and transferred
+					onward to the rotation prediction module. When the input image
+					pair contains little to no overlap, the correlation volume
+					can assume the novel role of detecting implicit cues.
+                    </p>
+                </div>
+            </div>
+						
+        </div>
+
+        <!-- Results, transformation -->
+        <div>
+            <hr>
+            <div class="row text-center">
+                <div class="col">
+                    <p class="h3">Predicted Rotation Results on Indoor Scenes</p>					
+                </div>
+            </div>
+			<div class="row">
+				<div class='col-md-12 col-sm-12 col-xs-12 align-middle mt-1'>
+					<p class="text-break">
+          Hover over the images to see the full panoramas with the ground-truth perspective images marked in red. 
+					We show our predicted viewpoints (in yellow) and the result obtained by a regression model predicting a continuous representation in 6D (in blue). 
+          </p>
+				</div>
+				<img src="./assets/results/title.png" alt="image" class="img-fluid rounded mx-auto d-block" >				
+			</div>
+			<div class="row">
+			<div class="card2">
+						<img src="./assets/results/sun360_1.PNG" alt="pers" class="img-fluid rounded mx-auto d-block">
+						<div class="img-top">
+							<img src="./assets/results/sun360_2.PNG" class="img-fluid rounded mx-auto d-block" alt="pano">
+						</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="card2">
+						<img src="./assets/results/interiornet_1.PNG" alt="pers" class="img-fluid rounded mx-auto d-block">
+						<div class="img-top">
+							<img src="./assets/results/interiornet_2.PNG" class="img-fluid rounded mx-auto d-block" alt="pano">
+						</div>
+				</div>
+			</div>
+       
+			
+			<div class="row text-center">
+          <div class="col">
+              </br>
+              <p class="h5">Predicted Rotation Results on Outdoor Scenes and Generalization to New Cities</p>
+          </div>
+      </div>
+      
+			
+      <div class="row">
+      <div class='col-md-12 col-sm-12 col-xs-12 align-middle mt-1'>
+					<p class="text-break">
+          We show results on images from unseen panoramas in Manhattan, Pittsburgh and London, 
+          all obtained from a model trained on images from Manhattan <b>only</b>.
+          </p>
+				</div>
+			<div class="card2">
+						<img src="./assets/results/manhattan_1.PNG" alt="pers" class="img-fluid rounded mx-auto d-block">
+						<div class="img-top">
+							<img src="./assets/results/manhattan_2.PNG" class="img-fluid rounded mx-auto d-block" alt="pano">
+						</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="card2">
+						<img src="./assets/results/pittsburgh_1.PNG" alt="pers" class="img-fluid rounded mx-auto d-block">
+						<div class="img-top">
+							<img src="./assets/results/pittsburgh_2.PNG" class="img-fluid rounded mx-auto d-block" alt="pano">
+						</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="card2">
+						<img src="./assets/results/london_1.PNG" alt="pers" class="img-fluid rounded mx-auto d-block">
+						<div class="img-top">
+							<img src="./assets/results/london_2.PNG" class="img-fluid rounded mx-auto d-block" alt="pano">
+						</div>
+				</div>
+			</div>
+        </div
+    </body>
+</html>
