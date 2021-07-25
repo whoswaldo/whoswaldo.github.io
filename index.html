@@ -122,27 +122,85 @@
         <!-- Paper section -->
         <div>
             <hr>
-            <div class='row'>
-                <div class='col-md-3 col-sm-3 col-xs-12 text-center col-sm-3'>
-                    <div class="row mt-4">
+            <div class="row">
+                <div class='col-md-3 col-sm-3 col-xs-12 text-center'>
+                    <div class="row mt-2">
                         <a href="https://arxiv.org/pdf/" style="max-width:200px; margin-left:auto; margin-right:auto"><!-- pdf link -->
                             <img src="assets/paper-snapshot.png" alt="paper-snapshot" class="img-thumbnail" width="80%" style="box-shadow: 10px 10px 5px grey;">
                         </a>
                     </div>
-                    <div class="row mt-4">
+                    <div class="row mt-4 text-center">
                         <div class="col">
                             <a class="h5" href="https://arxiv.org/abs/" style="margin-right:10px"><span>[Arxiv]</span></a>
-                            <a class="h5" href="https://github.com/apoorvkh/whos-waldo" style="margin-right:10px">
-                                <span>[Code] (coming soon)</span>
+                            <!-- <a class="h5" href="https://github.com/apoorvkh/whos-waldo" style="margin-right:10px"> -->
+                            <a class="h5" href="" style="margin-right:10px; color: gray">
+                                <span>[Code]</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class='col-md-9 col-sm-9 col-xs-12'>
-                    <p class='h4 font-weight-bold '>Abstract</p>
-                    <p style='line-height:1;'>
-                    We present a task and benchmark dataset for <b>person-centric visual grounding</b>, the problem of linking between people named in a caption and people pictured in an image. In contrast to prior work in visual grounding, which is predominantly object-based, our new task masks out the names of people in captions in order to encourage methods trained on such image–caption pairs to focus on contextual cues (such as rich interactions between multiple people), rather than learning associations between names and appearances. To facilitate this task, we introduce a new dataset, <b>Who's Waldo</b>, mined automatically from image–caption data on Wikimedia Commons. We propose a Transformer-based method that outperforms several strong baselines on this task, and are releasing our data to the research community to spur work on contextual models that consider both vision and language.
-                    </p>
+            		<p class='h4 font-weight-bold '>Abstract</p>
+             	<p style='line-height:1;'>
+                We present a task and benchmark dataset for <b>person-centric visual grounding</b>, the problem of linking between people named in a caption and people pictured in an image. In contrast to prior work in visual grounding, which is predominantly object-based, our new task masks out the names of people in captions in order to encourage methods trained on such image–caption pairs to focus on contextual cues (such as rich interactions between multiple people), rather than learning associations between names and appearances. To facilitate this task, we introduce a new dataset, <b>Who's Waldo</b>, mined automatically from image–caption data on Wikimedia Commons. We propose a Transformer-based method that outperforms several strong baselines on this task, and are releasing our data to the research community to spur work on contextual models that consider both vision and language.
+                </p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <hr>
+            <div class='row text-center'>
+                <div class='col'>
+                    <p class='h3'>Dataset</p>
+                </div>
+            </div>
+            <b>Who's Waldo</b> is a dataset of 270K image–caption pairs, depicting interatctions of people, that is automatically mined from <a href="https://commons.wikimedia.org"> Wikimedia Commons</a>.
+            <!-- [Explore dataset]
+            [Dataset statistics]
+            [Comparison of dataset to others]
+            [Release information]
+            [Data Structure]
+            [License Information] -->
+        </div>
+        
+        <div>
+            <hr>
+            <div class='row text-center'>
+                <div class='col'>
+                    <p class='h3'>People-centric Visual Grounding</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <hr>
+            <div class='row text-center'>
+                <div class='col'>
+                    <p class='h3'>Our Method</p>
+                </div>
+            </div>
+        </div>
+
+		<div>
+            <hr>
+            <div class='row'>
+                <div class='col-md-12 col-sm-12 col-xs-12'>
+            		<p class='h4 font-weight-bold '>Citation</p>
+<pre><code>@inproceedings{Cui2021Waldo,
+    title={Who's Waldo? Linking People Across Text and Images},
+    authors={Cui, Claire Yuqing and Khandelwal, Apoorv and Artzi, Yoav and Snavely, Noah and Averbuch-Elor, Hadar},
+    booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    year={2021}
+}</code></pre>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12 col-sm-12 col-xs-12'>
+            		<p class='h4 font-weight-bold '>Acknowledgements</p>
+             	<p style='line-height:1;'>
+                This work was supported in part by the National Science Foundation (IIS-2008313, CAREER-1750499), a Google Focused Award, by the generosity of the Schmidt Futures program, and by the Zuckerman STEM leadership program.
+                </p>
                 </div>
             </div>
         </div>
