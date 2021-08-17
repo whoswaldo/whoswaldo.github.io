@@ -4,46 +4,33 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-                               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <title>Who's Waldo?</title>
 
 		<style>
-			.card {
+			.teaser {
 				position: relative;
 				display: inline;
 			}
-			.card .img-top {
+			.teaser .img-top {
 				position: absolute;
 				top: 0;
 				left: 0;
 				opacity: 0;
 			}
-			.card:hover .img-top {
-				opacity: 1;
-			}
+			.teaser:hover .img-top { opacity: 1; }
             .tab { margin-left: 40px; }
-			.card2 {
-				position: relative; width: 100%;height: 100%;
-				display: inline;
-			}
-			.card2 .img-top {
-				width:100%; height:100%;
-				position: relative;
-				top: 0;
-				left: 0;
-				opacity: 0.5;
-			}
-			.card2:hover .img-top {
-				opacity: 1;
-			}
 		</style>
     </head>
 
     <body class="container" style="max-width:840px">
 
-        <!-- Heading -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+        <!-- heading -->
         <div>
             <!-- title -->
             <div class='row mt-5 mb-3'>
@@ -63,7 +50,7 @@
             </div>
 
             <!-- affiliations -->
-            <div class='row mb-3'>
+            <div class='row mb-1'>
                 <div class='col text-center'>
                     <p class="h6">
                         <a href="https://www.cornell.edu/"><span>Cornell University</span></a>
@@ -74,9 +61,32 @@
             </div>
 
             <!-- venue -->
+            <div class='row mb-2'>
+                <div class='col text-center'>
+                    <p class="h6">
+                        Oral Presentation @ ICCV 2021
+                        <br>
+                        * Equal Contribution
+                    </p>
+                </div>
+            </div>
+
+            <!-- links -->
             <div class='row mb-4'>
                 <div class='col text-center'>
-                    <p class="h6">Oral Presentation @ ICCV 2021</p>
+                    <a href="https://arxiv.org/abs/" target="_blank" class="btn btn-outline-primary" role="button">
+                        <i class="fa fa-file-pdf-o"></i>
+                        arXiv
+                    </a>
+                    <a href="https://whoswaldo.github.io/supplementary.zip" target="_blank" class="btn btn-outline-primary" role="button">
+                        <i class="fa fa-file-archive-o"></i>
+                        Supplementary
+                    </a>
+                    <!-- <a href="https://github.com/apoorvkh/whos-waldo" target="_blank" class="btn btn-outline-primary" role="button"> -->
+                    <a class="btn btn-outline-secondary" role="button">
+                        <i class="fa fa-github"></i>
+                        Code
+                    </a>
                 </div>
             </div>
         </div>
@@ -85,12 +95,12 @@
 		<!-- teaser -->
 		<div class='row justify-content-center'>
 
-			<div class="card" style="width:450px">
+			<div class="card teaser" style="width:450px">
                 <img src="assets/teaser_1.jpg" class="img-fluid rounded mx-auto d-block" >
                 <div class="img-top"><img src="assets/teaser_1_boxes.jpg" class="img-fluid rounded mx-auto d-block" ></div>
                 <p style="margin: 10px"><mark style="font-weight: bold; background-color: #FF6347; color: black;">Sam Schulz</mark> passes to <mark style="font-weight: bold; background-color: #FFD701; color: black;">Curtly Hampton</mark> during the UWS Giants vs Eastlake NEAFL match at the Robertson Oval on 1 August 2015.</p>
             </div>
-            <div class="card" style="width:380px">
+            <div class="card teaser" style="width:380px">
 				<img src="assets/teaser_2.jpg" class="img-fluid rounded mx-auto d-block" >
 				<div class="img-top"><img src="assets/teaser_2_boxes.jpg" class="img-fluid rounded mx-auto d-block" ></div>
                 <p style="margin: 5px"><mark style="font-weight: bold; background-color: #78CDAA; color: black;">Justyna Kowalczyk</mark>, <mark style="font-weight: bold; background-color: #FFB6C1; color: black;">Kikkan Randall</mark> and <mark style="font-weight: bold; background-color: #FFD701; color: black;">Ingvild Flugstad Østberg</mark> at the Royal Palace Sprint, part of the FIS World Cup 2012/2013, in Stockholm on March 20, 2013. <mark style="font-weight: bold; background-color: #FFB6C1; color: black;">Kikkan Randall</mark> won the sprint cup.</p>
@@ -129,15 +139,6 @@
                             <img src="assets/paper-snapshot.png" alt="paper-snapshot" class="img-thumbnail" width="80%" style="box-shadow: 10px 10px 5px grey;">
                         </a>
                     </div>
-                    <div class="row mt-4 text-center">
-                        <div class="col">
-                            <a class="h5" href="https://arxiv.org/abs/" style="margin-right:10px"><span>[Arxiv]</span></a>
-                            <!-- <a class="h5" href="https://github.com/apoorvkh/whos-waldo" style="margin-right:10px"> -->
-                            <a class="h5" href="" style="margin-right:10px; color: gray">
-                                <span>[Code]</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 <div class='col-md-9 col-sm-9 col-xs-12'>
             		<p class='h4 font-weight-bold '>Abstract</p>
@@ -152,34 +153,20 @@
             <hr>
             <div class='row text-center'>
                 <div class='col'>
-                    <p class='h3'>Dataset</p>
+                    <p class='h3'>The Who's Waldo Dataset</p>
                 </div>
             </div>
-            <b>Who's Waldo</b> is a dataset of 270K image–caption pairs, depicting interatctions of people, that is automatically mined from <a href="https://commons.wikimedia.org"> Wikimedia Commons</a>.
-            <!-- [Explore dataset]
-            [Dataset statistics]
-            [Comparison of dataset to others]
-            [Release information]
-            [Data Structure]
-            [License Information] -->
-        </div>
-        
-        <div>
-            <hr>
-            <div class='row text-center'>
-                <div class='col'>
-                    <p class='h3'>People-centric Visual Grounding</p>
-                </div>
+            <div class='mb-1'>
+                <b>Who's Waldo</b> is a dataset of 270K image–caption pairs, depicting interatctions of people, that is automatically mined from <a href="https://commons.wikimedia.org"> Wikimedia Commons</a>. We are currently only distributing this dataset to academics under certain terms of use and on a per-request basis.
             </div>
-        </div>
-        
-        <div>
-            <hr>
-            <div class='row text-center'>
-                <div class='col'>
-                    <p class='h3'>Our Method</p>
-                </div>
+            <div class='text-center mb-2'>
+                <a href="https://forms.gle/cYqWQj161NctuZV76" target="_blank" class="btn btn-primary" role="button">Request Access to Who's Waldo</a>
             </div>
+
+            <div class='text-center mb-3'>
+                <a href="https://whoswaldo.github.io/dataset_examples.html" target="_blank" class="btn btn-primary" role="button">Explore Dataset</a>
+            </div>
+
         </div>
 
 		<div>
@@ -190,7 +177,7 @@
 <pre><code>@inproceedings{Cui2021Waldo,
     title={Who's Waldo? Linking People Across Text and Images},
     author={Claire Yuqing Cui and Apoorv Khandelwal and Yoav Artzi and Noah Snavely and Hadar Averbuch-Elor},
-    journal={2021 IEEE/CVF International Conference on Computer Vision (ICCV)},
+    booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
     year={2021}
 }</code></pre>
                 </div>
@@ -199,7 +186,7 @@
                 <div class='col-md-12 col-sm-12 col-xs-12'>
             		<p class='h4 font-weight-bold'>Dataset License</p>
              	<p style='line-height:1;'>
-                The images in our dataset are provided by Wikimedia Commons under various <a href='https://freedomdefined.org/Definition'>free licenses</a>. These licenses permit the use, study, derivation, and redistribution of these images—sometimes with restrictions, e.g. requiring attribution and with <a href="https://en.wikipedia.org/wiki/Copyleft">copyleft</a>. We provide full license text and attribution for all images, make no modifications to any, and release these images under their original licenses. The associated captions are provided as a part of unstructured text in Wikimedia Commons, with rights to the original writers under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license. We modify these (as specified in our paper) and release such derivatives under the same license. We provide the rest of our dataset (i.e. detections, coreferences, and ground truth correspondences) under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license.
+                The images in our dataset are provided by Wikimedia Commons under various <a href='https://freedomdefined.org/Definition'>free licenses</a>. These licenses permit the use, study, derivation, and redistribution of these images—sometimes with restrictions, e.g. requiring attribution and with <a href="https://en.wikipedia.org/wiki/Copyleft">copyleft</a>. We provide source links, full license text, and attribution (when available) for all images, make no modifications to any image, and release these images under their original licenses. The associated captions are provided as a part of unstructured text in Wikimedia Commons, with rights to the original writers under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license. We modify these (as specified in our paper) and release such derivatives under the same license. We provide the rest of our dataset (i.e. detections, coreferences, and ground truth correspondences) under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license.
                 </p>
                 </div>
             </div>
@@ -207,58 +194,10 @@
                 <div class='col-md-12 col-sm-12 col-xs-12'>
             		<p class='h4 font-weight-bold'>Acknowledgements</p>
              	<p style='line-height:1;'>
-                This work was supported in part by the National Science Foundation (IIS-2008313, CAREER-1750499), a Google Focused Award, by the generosity of the Schmidt Futures program, and by the Zuckerman STEM leadership program.
+                This work was supported by the National Science Foundation (IIS-2008313, CAREER-1750499), a Google Focused Award, the generosity of Eric & Wendy Schmidt by recommendation of the the Schmidt Futures program, and the Zuckerman STEM Leadership Program.
                 </p>
                 </div>
             </div>
         </div>
-        <!-- <div>
-            <hr>
-            <div class='row text-center'>
-                <div class='col'>
-                    <p class='h3'>Overview of our Method</p>
-                </div>
-            </div>
-			
-			<div class='row mt-3'>                
-                <div class='col-md-12 col-sm-12 col-xs-12 mt-3'>
-                    <img src="assets/overview.png" class="img-fluid" alt="overview">
-                </div>  
-			</div> 
-			<div class='row mt-3'>        				
-                <div class='col-md-12 col-sm-12 col-xs-12 mt-3'>
-                    <p class="text-break">
-                    Given a pair of images, a shared-weight Siamese encoder extracts feature maps. We compute a 4D correlation
-					volume using the inner product of features, from which our model predicts the relative rotation (here, as distributions over Euler angles).
-                    </p>
-                </div>
-            </div>
-
-            <div class='row mt-3'>
-                <div class='col-md-6 col-sm-6 col-xs-12 mt-3'>
-                    <img src="assets/4dcrv.jpg" class="img-fluid" alt="4dcrv">
-                </div>
-                <div class='col-md-6 col-sm-6 col-xs-12 align-middle mt-3'>
-                    <p class="text-break">
-                    A 4D correlation volume is
-					calculated from a pair of image feature maps. Given a feature vector
-					from Image 1, we compute the dot product with all feature vectors
-					in Image 2, and build up a 2D slice of size H x W. Combining
-					all 2D slices over all feature vectors in Image 1, we obtain a 4D
-					correlation volume of size H x W x H x W.  
-					<br>
-					Our correlation volumes
-					are implicitly assigned a dual role which emerges
-					through training on both overlapping and non-overlapping
-					pairs. When the input image pair contains significant overlap,
-					pointwise correspondence can be computed and transferred
-					onward to the rotation prediction module. When the input image
-					pair contains little to no overlap, the correlation volume
-					can assume the novel role of detecting implicit cues.
-                    </p>
-                </div>
-            </div>
-						
-        </div> -->
     </body>
 </html>
