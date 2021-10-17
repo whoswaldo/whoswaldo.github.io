@@ -76,7 +76,7 @@ mkdir whos_waldo/splits
           
               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    <pre>whos_waldo/<br>├── 000000/<br>│   ├── image.jpg<br>│   ├── detections.json<br>│   ├── caption.txt<br>│   ├── coreferences.json<br>│   ├── ground_truth.json<br>│   └── licenses.json<br>...<br>└── 271746</pre>
+                    <pre>whos_waldo/<br>├── splits/<br>│   ├── train.txt<br>│   ├── val.json<br>│   └── test.json<br>|<br>├── 000000/<br>│   ├── image.jpg<br>│   ├── detections.json<br>│   ├── caption.txt<br>│   ├── coreferences.json<br>│   ├── ground_truth.json<br>│   └── licenses.json<br>...<br>└── 271746</pre>
                 </div>
               </div>
             </div>
@@ -90,7 +90,12 @@ mkdir whos_waldo/splits
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                  Instructions pending. Please refer to "Dataset Size and Splits" in Section 4 of our paper to learn more about how our splits were generated.
+                  <p>You may download dataset splits with the bash script above or with the following links (<a href="https://whoswaldo.s3.amazonaws.com/release/splits/train.txt">train</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/val.json">val</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/test.json">test</a>).</p>
+<pre>
+train.txt: <span style="color: #408080"># Line-seperated list of image ids in the training set</span>
+{val,test}.json: { <span style="color: #BA2121">&quot;102990&quot;</span> : [<span style="color: #666666">2</span>, <span style="color: #666666">1</span>, <span style="color: #666666">0</span>, <span style="color: #666666">3</span>] }  <span style="color: #408080; font-style: italic"># image id : list of coreference indices</span>
+</pre>
+                  <p>Please refer to "Dataset Size and Splits" in Section 4 of our paper to learn more about how our splits were generated.</p>
                 </div>
               </div>
             </div>
