@@ -104,12 +104,13 @@ train.txt: <span style="color: #408080"># Line-seperated list of image ids in th
               <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
                   <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Example Directory (002629)
+                    Example Directory
                   </button>
                 </h2>
               </div>
               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
+                  <b>whos_waldo/002629</b>
 <pre>
 image<span style="color: #666666">.</span>jpg : <span style="color: #666666">1874</span> x <span style="color: #666666">1500</span> px
 
@@ -168,15 +169,26 @@ As Who's Waldo includes textual data from a real-world (i.e. <i>messy</i>) data 
                 </div>
             </div>
             <div class='row'>
+              <div class='col-md-12 col-sm-12 col-xs-12'>
+                  <p class='h4 font-weight-bold'>Ethical Statement</p>
+                  <p style='line-height:1;'>
+                    People-centric datasets pose ethical challenges. For example, <a href="https://www.image-net.org">ImageNet</a> has been scrutinized based on <a href="https://excavating.ai/">issues</a> inherited from the <a href="https://arxiv.org/abs/1912.07726">“person” category</a> in WordNet. Our task and dataset were created with careful attention to ethical questions, which we encountered throughout our work. Access to our dataset is provided for research purposes only and with restrictions on redistribution. Additionally, as we mask all names in captions, our dataset cannot be easily repurposed for unintended tasks, such as identification of people by name. Due to biases in our data source, we do not consider the data appropriate for developing non-research systems without further processing or augmentation. More details on distribution and intended uses are provided in a supplemental datasheet (movtivated by <a href="https://arxiv.org/abs/1803.09010">Datasheets for Datasets</a>).
+                  </p>
+                  <div class='text-center mb-2'>
+                    <a href="./whoswaldo_datasheet.pdf" target="_blank" class="btn btn-primary" role="button">Datasheet for Who's Waldo</a>
+                </div>
+              </div>
+            </div>
+            <div class='row'>
                 <div class='col-md-12 col-sm-12 col-xs-12'>
             		<p class='h4 font-weight-bold '>Citation</p>
 <pre><code>@InProceedings{Cui_2021_ICCV,
-  author    = {Cui, Yuqing and Khandelwal, Apoorv and Artzi, Yoav and Snavely, Noah and Averbuch-Elor, Hadar},
-  title     = {Who's Waldo? Linking People Across Text and Images},
-  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-  month     = {October},
-  year      = {2021},
-  pages     = {1374-1384}
+    author    = {Cui, Yuqing and Khandelwal, Apoorv and Artzi, Yoav and Snavely, Noah and Averbuch-Elor, Hadar},
+    title     = {Who's Waldo? Linking People Across Text and Images},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {1374-1384}
 }</code></pre>
         </div>
       </div>
