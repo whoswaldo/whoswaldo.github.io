@@ -41,7 +41,7 @@
                     Once you've recieved access (via the <b>whoswaldo_signatures.csv</b> file), you may download and extract our dataset (~55 GB/tar) with the following bash script.
 
 <pre><code>
-<span style="color: #444444"># Make parent directory</span>
+<span style="color: #444444"># Make parent data directory</span>
 mkdir whos_waldo
 
 <span style="color: #444444"># Download dataset splits</span>
@@ -93,8 +93,9 @@ mkdir whos_waldo/splits
                   <p>You may download dataset splits with the bash script above or with the following links (<a href="https://whoswaldo.s3.amazonaws.com/release/splits/train.txt">train</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/val.json">val</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/test.json">test</a>).</p>
 <pre>
 train.txt: <span style="color: #408080"># Line-seperated list of image ids in the training set</span>
-{val,test}.json: { <span style="color: #BA2121">&quot;102990&quot;</span> : [<span style="color: #666666">2</span>, <span style="color: #666666">1</span>, <span style="color: #666666">0</span>, <span style="color: #666666">3</span>] }  <span style="color: #408080; font-style: italic"># image id : list of coreference indices</span>
+{val,test}.json: { <span style="color: #BA2121">&quot;102990&quot;</span> : [<span style="color: #666666">2</span>, <span style="color: #666666">1</span>, <span style="color: #666666">0</span>, <span style="color: #666666">3</span>] }  <span style="color: #408080; font-style: italic"># image id : coreference indices</span>
 </pre>
+                  <p>During evaluation, we compute accuracy as an average over each (independent) ground truth link (i.e. image — coreference-index pair). In other words, you should not compute accuracy per <i>image</i>, rather per <i>ground truth link</i>.</p>
                   <p>Please refer to "Dataset Size and Splits" in Section 4 of our paper to learn more about how our splits were generated.</p>
                 </div>
               </div>
