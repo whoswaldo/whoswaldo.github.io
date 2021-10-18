@@ -93,9 +93,9 @@ mkdir whos_waldo/splits
                   <p>You may download dataset splits with the bash script above or with the following links (<a href="https://whoswaldo.s3.amazonaws.com/release/splits/train.txt">train</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/val.json">val</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/test.json">test</a>).</p>
 <pre>
 train.txt: <span style="color: #408080"># Line-seperated list of image ids in the training set</span>
-{val,test}.json: { <span style="color: #BA2121">&quot;102990&quot;</span> : [<span style="color: #666666">2</span>, <span style="color: #666666">1</span>, <span style="color: #666666">0</span>, <span style="color: #666666">3</span>] }  <span style="color: #408080; font-style: italic"># image id : coreference indices</span>
+{val,test}.json: { <span style="color: #BA2121">&quot;102990&quot;</span> : [<span style="color: #666666">2</span>, <span style="color: #666666">1</span>, <span style="color: #666666">0</span>, <span style="color: #666666">3</span>] }  <span style="color: #408080; font-style: italic"># image id : ground_truth.json keys</span>
 </pre>
-                  <p>During evaluation, we compute accuracy as an average over each (independent) ground truth link (i.e. image — coreference-index pair). In other words, you should not compute accuracy per <i>image</i>, rather per <i>ground truth link</i>.</p>
+                  <p>During evaluation, we compute accuracy as an average over independent ground truth links (i.e. over each image—link pair). In other words, you should not compute accuracy per <i>image</i>, rather over all <i>ground truth links</i>.</p>
                   <p>Please refer to "Dataset Size and Splits" in Section 4 of our paper to learn more about how our splits were generated.</p>
                 </div>
               </div>
@@ -114,14 +114,14 @@ train.txt: <span style="color: #408080"># Line-seperated list of image ids in th
 <pre>
 image<span style="color: #666666">.</span>jpg : <span style="color: #666666">1874</span> x <span style="color: #666666">1500</span> px
 
+caption<span style="color: #666666">.</span>txt : <span style="color: #BA2121">&quot;Portola Valley, Calif., native, Maj. Gen. [NAME], Commanding general of the Multi-National Division-Baghdad briefs the new U.S. Ambassador to Iraq, [NAME] (center), on the day&#39;s plan to take a driving tour of Haifa Street and a walking tour of the Sayliah Market in central Baghdad June 26.&quot;</span>
+
+coreferences<span style="color: #666666">.</span>json : [ [[<span style="color: #666666">153</span>, <span style="color: #666666">159</span>]], [[<span style="color: #666666">42</span>, <span style="color: #666666">48</span>]] ]  <span style="color: #408080; font-style: italic"># clusters of co-referring name tokens</span>
+
 detections<span style="color: #666666">.</span>json : [{
     <span style="color: #BA2121">&quot;keypoints&quot;</span> : [(x, y, score), <span style="color: #666666">...</span> ]
     <span style="color: #BA2121">&quot;bbox&quot;</span> : [x1, y1, x2, y2, score],
 }, <span style="color: #666666">...</span> ]  <span style="color: #408080; font-style: italic"># bounding boxes, COCO whole body landmarks, relative to image dimensions</span>
-
-caption<span style="color: #666666">.</span>txt : <span style="color: #BA2121">&quot;Portola Valley, Calif., native, Maj. Gen. [NAME], Commanding general of the Multi-National Division-Baghdad briefs the new U.S. Ambassador to Iraq, [NAME] (center), on the day&#39;s plan to take a driving tour of Haifa Street and a walking tour of the Sayliah Market in central Baghdad June 26.&quot;</span>
-
-coreferences<span style="color: #666666">.</span>json : [ [[<span style="color: #666666">153</span>, <span style="color: #666666">159</span>]], [[<span style="color: #666666">42</span>, <span style="color: #666666">48</span>]] ]  <span style="color: #408080; font-style: italic"># clusters of co-referring name tokens</span>
 
 ground_truth<span style="color: #666666">.</span>json : { <span style="color: #BA2121">&quot;0&quot;</span> : <span style="color: #666666">2</span> }  <span style="color: #408080; font-style: italic"># coreference idx : detection idx</span>
 
