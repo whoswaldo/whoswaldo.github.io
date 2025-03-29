@@ -1,117 +1,144 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>Who's Waldo – Dataset</title>
-    </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <title>Who's Waldo – Dataset</title>
+</head>
 
-    <body class="container" style="max-width:840px">
+<body class="container" style="max-width:840px">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
 
-    <div style="margin-top: 25px;">
-        <div class='row text-center'>
-            <div class='col'>
-                <p class='h3'>The Who's Waldo Dataset <a href=".">(Homepage)</a></p>
-            </div>
-        </div>
-        <div class='mb-1'>
-            <b>Who's Waldo</b> is a dataset of 270K image–caption pairs, depicting interatctions of people, that is automatically mined from <a href="https://commons.wikimedia.org"> Wikimedia Commons</a>. We are currently only distributing this dataset to academics under certain terms of use and on a per-request basis. To prevent unintended uses, we are also only distributing the versison of our dataset with masked names.
-        </div>
-
-        <div class='text-center mb-2'>
-            <a href="./dataset_examples.html" target="_blank" class="btn btn-primary" role="button">Explore Dataset</a>
-        </div>
-
-        <div class='text-center mb-3'>
-            <a href="https://forms.gle/cYqWQj161NctuZV76" target="_blank" class="btn btn-primary" role="button">Request Access to Who's Waldo</a>
-        </div>
+  <div style="margin-top: 25px;">
+    <div class='row text-center'>
+      <div class='col'>
+        <p class='h3'>The Who's Waldo Dataset <a href=".">(Homepage)</a></p>
+      </div>
+    </div>
+    <div class='mb-1'>
+      <b>Who's Waldo</b> is a dataset of 270K image–caption pairs, depicting interatctions of people, that is
+      automatically mined from <a href="https://commons.wikimedia.org">Wikimedia Commons</a>. We are currently only
+      distributing this dataset to academics under certain terms of use and on a per-request basis. To prevent
+      unintended uses, we are also only distributing the versison of our dataset with masked names.
     </div>
 
-    <hr>
+    <div class='text-center mb-2'>
+      <a href="./dataset_examples.html" target="_blank" class="btn btn-primary" role="button">Explore Dataset</a>
+    </div>
 
-		<div>
-            <div class='row'>
-                <div class='col-md-12 col-sm-12 col-xs-12'>
-                    <p class='h4 font-weight-bold'>Downloading the dataset (310 GB)</p>
-                    Once you've recieved access (via the <b>whoswaldo_signatures.csv</b> file), you may download and extract our dataset (~55 GB/tar) with the following <a href="./download_whoswaldo.sh">bash script</a>.
+    <div class='text-center mb-3'>
+      <a href="https://huggingface.co/datasets/apoorvkh/whoswaldo" target="_blank" class="btn btn-primary"
+        role="button">Request Access to Who's Waldo</a>
+    </div>
+  </div>
 
-<pre><code>
-<span style="color: #444444"># Make parent data directory</span>
-mkdir whos_waldo
+  <hr>
 
-<span style="color: #444444"># Download dataset splits</span>
-mkdir whos_waldo/splits
-<span style="color: #008800; font-weight: bold">for </span>split in train.txt val.json test.json
-    <span style="color: #008800; font-weight: bold">do </span>curl -o whos_waldo/splits/<span style="color: #008800; font-weight: bold">${</span><span style="color: #996633">split</span><span style="color: #008800; font-weight: bold">}</span> <span style="background-color: #fff0f0">&quot;https://whoswaldo.s3.amazonaws.com/release/splits/${split}&quot;</span>
-<span style="color: #008800; font-weight: bold">done</span>
+  <div>
+    <div class='row'>
+      <div class='col-md-12 col-sm-12 col-xs-12'>
+        <p class='h4 font-weight-bold'>Downloading the dataset (334 GB)</p>
+        Once you've recieved access, you should <a
+          href="https://huggingface.co/docs/huggingface_hub/en/guides/cli">install the
+          <span><code>huggingface-cli</code></span></a> and download our dataset with the following script.
 
-<span style="color: #444444"># Download tar archives</span>
-<span style="color: #008800; font-weight: bold">while </span><span style="color: #996633">IFS</span><span style="color: #333333">=</span>, <span style="color: #007020">read</span> -r i key sig exp;
-    <span style="color: #008800; font-weight: bold">do </span>curl -o <span style="color: #996633">whos_waldo_${i}.tar</span> <span style="background-color: #fff0f0">&quot;https://whoswaldo.s3.amazonaws.com/release/whos_waldo_${i}.tar?AWSAccessKeyId=${key}&amp;Signature=${sig}&amp;Expires=${exp}&quot;</span>;
-<span style="color: #008800; font-weight: bold">done</span> &lt; whoswaldo_signatures.csv
+        <pre><code>
+  mkdir whoswaldo <span style="color: #333333">&amp;&amp;</span> <span style="color: #007020">cd </span>whoswaldo
+  huggingface-cli login  <span style="color: #888888"># if not already logged in</span>
 
-<span style="color: #444444"># Extract the dataset, deleting archives</span>
-<span style="color: #008800; font-weight: bold">for </span>i in {0..5}; <span style="color: #008800; font-weight: bold">do</span>
-    tar xf <span style="color: #996633">whos_waldo_${i}.tar</span>;
-    rm <span style="color: #996633">whos_waldo_${i}.tar</span>;
-<span style="color: #008800; font-weight: bold">done</span>
-</code></pre>
-                </div>
-            </div>
+  huggingface-cli download --repo-type dataset <span style="background-color: #fff0f0">&quot;apoorvkh/whoswaldo&quot;</span> --local-dir .
+  
+  <span style="color: #008800; font-weight: bold">for </span>f in archives/whoswaldo_data_*.tar; <span style="color: #008800; font-weight: bold">do</span>
+  <span style="color: #008800; font-weight: bold">    </span><span style="color: #007020">echo</span> <span style="background-color: #fff0f0">&quot;Extracting $f...&quot;</span>
+      tar -xf <span style="background-color: #fff0f0">&quot;$f&quot;</span>
+  <span style="color: #008800; font-weight: bold">done</span>
+  
+  rm -r archives  <span style="color: #888888"># if extraction was successful</span>
+  </code></pre>
 
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Directory Structure
-                  </button>
-                </h2>
-              </div>
-          
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <pre>whos_waldo/<br>├── splits/<br>│   ├── train.txt<br>│   ├── val.json<br>│   └── test.json<br>|<br>├── 000000/<br>│   ├── image.jpg<br>│   ├── detections.json<br>│   ├── caption.txt<br>│   ├── coreferences.json<br>│   ├── ground_truth.json<br>│   └── licenses.json<br>...<br>└── 271746</pre>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Dataset Splits
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>You may download dataset splits with the bash script above or with the following links (<a href="https://whoswaldo.s3.amazonaws.com/release/splits/train.txt">train</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/val.json">val</a>, <a href="https://whoswaldo.s3.amazonaws.com/release/splits/test.json">test</a>).</p>
-<pre>
+
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+              data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Directory Structure
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <pre><code>
+whoswaldo
+├── data
+│   ├── 000000
+│   │   ├── caption.txt
+│   │   ├── coreferences.json
+│   │   ├── detections.json
+│   │   ├── ground_truth.json
+│   │   ├── image.jpg
+│   │   └── license.json
+│   ...
+│   └── 271746/
+└── splits
+    ├── test.json
+    ├── train.txt
+    └── val.json
+            </code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Dataset Splits
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <pre>
 train.txt: <span style="color: #408080"># Line-seperated list of image ids in the training set</span>
 {val,test}.json: { <span style="color: #BA2121">&quot;102990&quot;</span> : [<span style="color: #666666">2</span>, <span style="color: #666666">1</span>, <span style="color: #666666">0</span>, <span style="color: #666666">3</span>] }  <span style="color: #408080; font-style: italic"># image id : ground_truth.json keys</span>
 </pre>
-                  <p>During evaluation, we compute accuracy as an average over independent ground truth links (i.e. over each image—link pair). In other words, you should not compute accuracy per <i>image</i>, rather over all <i>ground truth links</i>.</p>
-                  <p>Please refer to "Dataset Size and Splits" in Section 4 of our paper to learn more about how our splits were generated.</p>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Example Directory
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  <b>whos_waldo/002629</b>
-<pre>
+            <p>During evaluation, we compute accuracy as an average over independent ground truth links (i.e. over each
+              image—link pair). In other words, you should not compute accuracy per <i>image</i>, rather over all
+              <i>ground truth links</i>.
+            </p>
+            <p>Please refer to "Dataset Size and Splits" in Section 4 of our paper to learn more about how our splits
+              were generated.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Example Directory
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <b>whoswaldo/data/002629</b>
+            <pre>
 image<span style="color: #666666">.</span>jpg : <span style="color: #666666">1874</span> x <span style="color: #666666">1500</span> px
 
 caption<span style="color: #666666">.</span>txt : <span style="color: #BA2121">&quot;Portola Valley, Calif., native, Maj. Gen. [NAME], Commanding general of the Multi-National Division-Baghdad briefs the new U.S. Ambassador to Iraq, [NAME] (center), on the day&#39;s plan to take a driving tour of Haifa Street and a walking tour of the Sayliah Market in central Baghdad June 26.&quot;</span>
@@ -130,59 +157,83 @@ licenses<span style="color: #666666">.</span>json : {
     <span style="color: #BA2121">&quot;license&quot;</span>: <span style="color: #BA2121">&quot;Public domain&quot;</span>
 }   <span style="color: #408080; font-style: italic"># &quot;license_url&quot; and &quot;artist&quot; keys are also often present</span>    
 </pre>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingFour">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Reading JSON Files
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                <div class="card-body">
-As Who's Waldo includes textual data from a real-world (i.e. <i>messy</i>) data source, it is important to encode all strings to "UTF-8" to properly handle special characters. We recommend using the following Python 3 code to read files:
-<pre><code>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Reading JSON Files
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            As Who's Waldo includes textual data from a real-world (i.e. <i>messy</i>) data source, it is important to
+            encode all strings to "UTF-8" to properly handle special characters. We recommend using the following Python
+            3 code to read files:
+            <pre><code>
 <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">json</span>
 
 <span style="color: #008800; font-weight: bold">with</span> <span style="color: #007020">open</span>(<span style="background-color: #fff0f0">&#39;path/to/file.json&#39;</span>, <span style="background-color: #fff0f0">&#39;r&#39;</span>, encoding<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;utf-8&#39;</span>) <span style="color: #008800; font-weight: bold">as</span> file:
     data <span style="color: #333333">=</span> json<span style="color: #333333">.</span>load(file)
 </code></pre>
-                </div>
-              </div>
-            </div>            
           </div>
+        </div>
+      </div>
+    </div>
 
-          <hr>
+    <hr>
 
-          <div>
-            <div class='row'>
-                <div class='col-md-12 col-sm-12 col-xs-12'>
-                    <a id="dataset-license">
-                    <p class='h4 font-weight-bold'>Dataset License</p>
-                    <p style='line-height:1;'>
-                    The images in our dataset are provided by Wikimedia Commons under various <a href='https://freedomdefined.org/Definition'>free licenses</a>. These licenses permit the use, study, derivation, and redistribution of these images—sometimes with restrictions, e.g. requiring attribution and with <a href="https://en.wikipedia.org/wiki/Copyleft">copyleft</a>. We provide source links, full license text, and attribution (when available) for all images, make no modifications to any image, and release these images under their original licenses. The associated captions are provided as a part of unstructured text in Wikimedia Commons, with rights to the original writers under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license. We modify these (as specified in our paper) and release such derivatives under the same license. We provide the rest of our dataset (i.e. detections, coreferences, and ground truth correspondences) under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license.
-                    </p>
-                    </a>
-                </div>
-            </div>
-            <div class='row'>
-              <div class='col-md-12 col-sm-12 col-xs-12'>
-                  <p class='h4 font-weight-bold'>Ethical Statement</p>
-                  <p style='line-height:1;'>
-                    People-centric datasets pose ethical challenges. For example, <a href="https://www.image-net.org">ImageNet</a> has been scrutinized based on <a href="https://excavating.ai/">issues</a> inherited from the <a href="https://arxiv.org/abs/1912.07726">“person” category</a> in WordNet. Our task and dataset were created with careful attention to ethical questions, which we encountered throughout our work. Access to our dataset is provided for research purposes only and with restrictions on redistribution. Additionally, as we mask all names in captions, our dataset cannot be easily repurposed for unintended tasks, such as identification of people by name. Due to biases in our data source, we do not consider the data appropriate for developing non-research systems without further processing or augmentation. More details on distribution and intended uses are provided in a supplemental datasheet (movtivated by <a href="https://arxiv.org/abs/1803.09010">Datasheets for Datasets</a>).
-                  </p>
-                  <div class='text-center mb-2'>
-                    <a href="./whoswaldo_datasheet.pdf" target="_blank" class="btn btn-primary" role="button">Datasheet for Who's Waldo</a>
-                </div>
-              </div>
-            </div>
-            <div class='row'>
-                <div class='col-md-12 col-sm-12 col-xs-12'>
-            		<p class='h4 font-weight-bold '>Citation</p>
-<pre><code>@InProceedings{Cui_2021_ICCV,
+    <div>
+      <div class='row'>
+        <div class='col-md-12 col-sm-12 col-xs-12'>
+          <a id="dataset-license">
+            <p class='h4 font-weight-bold'>Dataset License</p>
+            <p style='line-height:1;'>
+              The images in our dataset are provided by Wikimedia Commons under various <a
+                href='https://freedomdefined.org/Definition'>free licenses</a>. These licenses permit the use, study,
+              derivation, and redistribution of these images—sometimes with restrictions, e.g. requiring attribution and
+              with <a href="https://en.wikipedia.org/wiki/Copyleft">copyleft</a>. We provide source links, full license
+              text, and attribution (when available) for all images, make no modifications to any image, and release
+              these images under their original licenses. The associated captions are provided as a part of unstructured
+              text in Wikimedia Commons, with rights to the original writers under the <a
+                href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license. We modify these (as
+              specified in our paper) and release such derivatives under the same license. We provide the rest of our
+              dataset (i.e. detections, coreferences, and ground truth correspondences) under a <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12 col-sm-12 col-xs-12'>
+          <p class='h4 font-weight-bold'>Ethical Statement</p>
+          <p style='line-height:1;'>
+            People-centric datasets pose ethical challenges. For example, <a
+              href="https://www.image-net.org">ImageNet</a> has been scrutinized based on <a
+              href="https://excavating.ai/">issues</a> inherited from the <a
+              href="https://arxiv.org/abs/1912.07726">“person” category</a> in WordNet. Our task and dataset were
+            created with careful attention to ethical questions, which we encountered throughout our work. Access to our
+            dataset is provided for research purposes only and with restrictions on redistribution. Additionally, as we
+            mask all names in captions, our dataset cannot be easily repurposed for unintended tasks, such as
+            identification of people by name. Due to biases in our data source, we do not consider the data appropriate
+            for developing non-research systems without further processing or augmentation. More details on distribution
+            and intended uses are provided in a supplemental datasheet (movtivated by <a
+              href="https://arxiv.org/abs/1803.09010">Datasheets for Datasets</a>).
+          </p>
+          <div class='text-center mb-2'>
+            <a href="./whoswaldo_datasheet.pdf" target="_blank" class="btn btn-primary" role="button">Datasheet for
+              Who's Waldo</a>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12 col-sm-12 col-xs-12'>
+          <p class='h4 font-weight-bold '>Citation</p>
+          <pre><code>@InProceedings{Cui_2021_ICCV,
     author    = {Cui, Yuqing and Khandelwal, Apoorv and Artzi, Yoav and Snavely, Noah and Averbuch-Elor, Hadar},
     title     = {Who's Waldo? Linking People Across Text and Images},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
@@ -193,5 +244,6 @@ As Who's Waldo includes textual data from a real-world (i.e. <i>messy</i>) data 
         </div>
       </div>
     </div>
-    </body>
+</body>
+
 </html>
